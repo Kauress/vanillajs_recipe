@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Vanilla JavaScript Shopping Cart</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container-fluid header-container">
+        <div class="row">
+            <div class="col-lg-4 header-col">
+                <h4 class="header-text">JUST DESSERTS </h4>
+                <h1 class="header-text"> Desserts for all seasons</h1>
+                <i class="fa fa-circle fa-lg fa-1x"> </i>
+                <i class="fa fa-circle fa-lg fa-2x"> </i>
+                <i class="fa fa-circle fa-lg fa-3x"> </i>
+                <p class="header-text"> Client side dessert recipe app built using Vanilla JavaScript. No frameworks or libraries used. This app explores objects in JavaScript. </p>
+                <span id="header-span"> <i class="fa fa-play fa-lg fa-1x"> </i>  Watch video </span>
+            </div> <!-- end of col-md-4 -->
+            <div class="col-lg-8 header-image-col">
+            <img src="images/recipe-header.jpeg" class="img-responsive-header-image">
+            </div><!-- end of col-lg-8 -->
+        </div> <!-- end of row -->
+    </div>  <!-- end of container -->
+
+    <div class="container-fluid input-container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href ="http://www.twitter.com/kauresss"><i class="fa fa-twitter fa-lg fa-2x"> </i></a>
+                <a href ="http://www.instagram.com"> <i class="fa fa-instagram fa-lg fa-2x"> </i></a>
+                <a href ="http://www.facebook.com"><i class="fa fa-facebook fa-lg fa-2x"> </i></a>
+            </div> <!-- end of col-md-4 -->
+            <div class="col-md-4">
+                <input type="text" value="Search for goodies" id="search-input" />
+            </div> <!-- end of col-md-4 -->
+            <div class="col-md-4">
+                <button class="btn btn-success" id="add-button" data-toggle="modal" data-target="#myModal"> Add a recipe</button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                  <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+     <h3 class="modal-title">Add a recipe</h3>
+	    </div> <!-- end of modal header -->
+	                 <div class="modal-body">
+                     <form id="my-form">
+                       <ul>
+                           <li>
+                               <label for="name">Name:</label>
+                               <br/>
+                               <input type="text" name="name" placeholder="Recipe name" required>
+                           </li>
+                           <li>
+                               <label for="ingredients">Ingredients:</label>
+                               <br/>
+                               <textarea name="ingredients" cols="40" rows="6" required></textarea>
+                           </li>
+                           <li>
+                               <label for="instructions">Instructions:</label>
+                               </br/>
+                               <textarea name="instructions" cols="40" rows="6" required></textarea>
+                           </li>
+                           <li>
+                             <label for="time">Cooking time:</label>
+                             </br/> Hours:
+                             <input type="number" name="time" min="1" max="10"> Minutes:
+                             <input type="number" name="time" min="1" max="60">
+                         </li>
+                         <li>
+                             <label for="pic"> Please upload a picture </label>
+                             <input type="file" id="pic">
+                         </li>
+                         <li>
+                             <label for="category">Category:</label>
+                             </br>
+                             <select name="category" id="category">
+                                 <option value="brownies">Brownies</option>
+                                 <option value="donuts">Donuts</option>
+                                 <option value="cake">Cake</option>
+                                 <option value="candy">Candy</option>
+                                 <option value="cupcakes">Cupcakes</option>
+                                 <option value="icecream">Icecream</option>
+                                 <option value="fudge">Fudge</option>
+                                 <option value="gelato">Gelato</option>
+                                 <option value="pies">Pies</option>
+                                 <option value="pudding">Pudding</option>
+                                 <option value="taffy">Taffy</option>
+                                 <option value="scones">Scones</option>
+                             </select>
+                         </li>
+                     </ul>
+                     </form>
+                            </div><!-- modal body -->
+                            <div class="modal-footer">
+                                <button class="btn btn-success" id="add-button2"> Submit</button>
+                                <button type="button" class="btn btn-default" id="close-modal" data-dismiss="modal">Close</button>
+                            </div><!-- modal footer -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   <!-- end of col-md-4 -->
+    </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <div class="container video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Xh_Neg-Hp84" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j70yTq2ysLQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8VFWJmAK3i4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/FYZIOLr-evE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div><!-- end of container -->
+
+    <div class="container category-container">
+        <h3> Browse recipe categories </h3>
+        <div class="row">
+            <div class="col-md-4">
+                <ul>
+                    <li> <a href=""> Brownies</a></li>
+                    <li><a href="">Donuts</a></li>
+                    <li><a href="">Cake</a></li>
+                    <li><a href="">Candy</a></li>
+                </ul>
+            </div>
+            <!-- end of col-md-4 -->
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="">Cupcake </a></li>
+                    <li><a href="">Icecream</a></li>
+                    <li><a href="">Fudge</a></li>
+                    <li><a href="">Gelato</a></li>
+                </ul>
+            </div>
+            <!-- end of col-md-4 -->
+            <div class="col-md-4">
+                <ul>
+                    <li> <a href="">Pies</a></li>
+                    <li><a href="">Pudding</a></li>
+                    <li><a href="">Taffy</a></li>
+                    <li><a href="">Scones</a></li>
+                </ul>
+            </div>
+            <!-- end of col-md-4 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container -->
+
+    <div class="container recipes">
+        <h3> Recipes </h3>
+    </div>
+    <!-- end of container -->
+
+    <div class="container">
+        <div class="row row-centered">
+            <div class="col-sm-4 col-centered recipe-card">
+                <img src="images/cake2.jpeg" class="img-responsive">
+                <h4 class="recipe-heading">Chocolate Cake</h4>
+                <div class="button-div">
+                    <button class="btn btn-default"><i class="fa fa-shopping-basket fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-cutlery fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-clock-o fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-image fa-2x"></i>
+                    </button>
+                </div>
+                <!-- end of button div -->
+            </div>
+
+            <div class="col-sm-4 col-centered recipe-card">
+                <img src="images/gelato.jpeg" class="img-responsive">
+                <h4 class="recipe-heading">Gelato</h4>
+                <div class="button-div">
+                    <button class="btn btn-default"><i class="fa fa-shopping-basket fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-cutlery fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-clock-o fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-image fa-2x"></i>
+                    </button>
+                </div>
+                <!-- end of button div -->
+            </div>
+
+            <div class="col-sm-4 col-centered recipe-card">
+                <img src="images/candy.jpg" class="img-responsive">
+                <h4 class="recipe-heading">Vanilla Brownies</h4>
+                <div class="button-div">
+                    <button class="btn btn-default"><i class="fa fa-shopping-basket fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-cutlery fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-clock-o fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-image fa-2x"></i>
+                    </button>
+                </div>
+                <!-- end of button div -->
+            </div>
+
+            <div class="col-sm-4 col-centered recipe-card">
+                <img src="images/donuts.jpg" class="img-responsive">
+                <h4 class="recipe-heading">Ice cream</h4>
+                <div class="button-div">
+                    <button class="btn btn-default"><i class="fa fa-shopping-basket fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-cutlery fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-clock-o fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-image fa-2x"></i>
+                    </button>
+                </div>
+                <!-- end of button div -->
+            </div>
+
+            <div class="col-sm-4 col-centered recipe-card">
+                <img src="images/cake2.jpeg" class="img-responsive">
+                <h4 class="recipe-heading"> hello</h4>
+                <div class="button-div">
+                    <button class="btn btn-default"><i class="fa fa-shopping-basket fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-cutlery fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-clock-o fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-image fa-2x"></i>
+                    </button>
+                </div>
+                <!-- end of button div -->
+            </div>
+            <div class="col-sm-4 col-centered recipe-card">
+                <img src="images/pie.jpg" class="img-responsive">
+                <h4 class="recipe-heading"> hello</h4>
+                <div class="button-div">
+                    <button class="btn btn-default"><i class="fa fa-shopping-basket fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-cutlery fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-clock-o fa-2x"></i>
+                    </button>
+                    <button class="btn btn-default"><i class="fa fa-image fa-2x"></i>
+                    </button>
+                </div>
+                <!-- end of button div -->
+            </div>
+
+        </div>
+        <!-- end of row center -->
+    </div>
+    <!-- end of container -->
+
+
+    <div class="container-fluid footer">
+    <div class="row">
+        <div class="col-md-4" id="footer">
+        <h3>Disclaimer</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum. </p>
+            <p>Lorem ipsum dolor sit amet, conseceritatis totam voluptas nostrum.</p>
+        </div> <!-- end com-md- 4-div -->
+       <div class="col-md-4">
+       <h3>About</h3>
+       <li>Projects</li>
+       <li>Blog</li>
+       <li>Awards</li>
+        </div> <!-- end of col-md-4 -->
+        <div class="col-md-4">
+       <h3>Contact</h3>
+       <li><i class="fa fa-envelope fa-1x"></i> Email</li>
+       <li><i class="fa fa-link fa-1x"></i> Blog</li>
+       <li><i class="fa fa-slack fa-1x"></i> Slack</li>
+       <button class="btn btn-success" >Hi</button>
+        </div> <!-- end of col-md-4 -->
+    </div> <!-- end of row -->
+    <!-- end of footer container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom shop JS -->
+    <script src="js/shop.js"></script>
+</body>
+
+</html>

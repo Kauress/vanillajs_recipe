@@ -1,0 +1,193 @@
+
+/* custom font */
+ @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+/* ----------------------------------------------------------
+                        BODY STYLES
+----------------------------------------------------------- */
+ body{
+     font-family: 'Comfortaa', cursive;
+     overflow-x: hidden;
+     background-color:#ffe6e6;
+}
+p{
+    font-size: 18px;
+}
+/* ----------------------------------------------------------
+                      HEADER STYLES
+----------------------------------------------------------- */
+ .header-container {
+     background-color:#e259a5;
+     height:480px;
+     color: #FFFFFF;
+     text-align:center;
+}
+ .header-col{
+     padding: 10px;
+     color: #8182a7;
+}
+ .fa-circle {
+     color: #F9F9F9;
+}
+ .header-text {
+     padding:20px;
+}
+ .header-text{
+   color: #FFFFFF;
+ text-transform: uppercase;
+}
+ .header-image-col{
+     padding: 0px;
+}
+ .img-responsive-header-image{
+  float:right;
+1  width:85%
+ }
+ h1{
+   color: #e259a5;
+     text-align:center;
+     font-weight: 900;
+     text-transform: uppercase;
+}
+ h3 {
+   color: #e259a5;
+     text-transform: uppercase;
+}
+ #header-span {
+   color: #FFFFFF;
+}
+
+/* ----------------------------------------------------------
+                      INPUT CONTAINER & STYLES
+----------------------------------------------------------- */
+ .input-container {
+     margin-top: 30px;
+     padding: 10px;
+     text-align:center;
+}
+ #search-input{
+     width: 80%;
+     border: 4px solid #fbf25f;
+}
+#search-input:focus {
+    outline: none;
+    background-color: #fbf25f;
+}
+ .category-container {
+     margin-top: 30px;
+     text-align:center;
+}
+ li {
+     margin: 10px;
+     list-style: none;
+     font-size: 16px;
+}
+ a{
+     color:black;
+}
+ a:hover {
+     color: #e259a5;
+     underline: none;
+     text-decoration: none;
+}
+ #add-button {
+     width: 140px;
+     height:40px;
+     background-color:#e259a5;
+     border: none;
+}
+/* ----------------------------------------------------------
+                      MODAL STYLES
+----------------------------------------------------------- */
+ .modal-body {
+     text-align: left;
+}
+ label{
+     color: #e259a5;
+}
+ label[for=pic]{
+}
+ textarea{
+     border-color: #585858;
+     max-width: 100%;
+     max-height: 400px;
+}
+ select{
+     border: none;
+     height: 30px;
+}
+ input[type="number"] {
+     margin: 5px;
+     width: 90px;
+}
+ .modal-footer{
+     text-align: center;
+}
+ #add-button2 {
+     width: 140px;
+     height:40px;
+     background-color:#e259a5;
+     border: none;
+}
+ #close-modal{
+     width: 140px;
+     height:40px;
+     border-color: #e259a5;
+}
+
+/* ----------------------------------------------------------
+                VIDEO CONTAINER
+----------------------------------------------------------- */
+
+.video-container{
+  margin-top:40px;
+  text-align: center;
+
+}
+
+/* ----------------------------------------------------------
+                RECIPE CONTAINER
+----------------------------------------------------------- */
+ .recipes{
+     margin-top: 50px;
+     text-align:center;
+}
+/* centered columns styles */
+ .row-centered {
+     text-align:center;
+}
+ .col-centered {
+     display:inline-block;
+     float:none;
+     border: 6px solid #F5F5F5;
+     height: auto;
+     width: 30%;
+     margin-bottom: 5px;
+     padding:0px;
+}
+ .img-responsive{
+     margin-top:20px;
+     margin-bottom: 50px;
+     height:200px;
+     width: 400px;
+}
+ .recipe-heading{
+     margin-bottom: 50px;
+}
+ .button-div{
+     width: 100%;
+     border-top: 3px solid #E8E8E8;
+}
+ .button-div > .btn-default{
+     width: 60px;
+     color: #897e9d;
+     border: none;
+}
+
+/* ----------------------------------------------------------
+              FOOTER
+----------------------------------------------------------- */
+ .footer{
+     margin-top: 150px;
+     background-color:#ffe6e6;
+     text-align: center;
+}
